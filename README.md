@@ -1,5 +1,5 @@
 # qb.Events
-Event channel management with scriptable objects
+Event channel management with scriptable objects and other behavhiour arround unity event 
 
 ## IMPORTANT!
 The package unity-package-manager-utilities must be installed to resolve external dependencies
