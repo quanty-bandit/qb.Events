@@ -32,11 +32,11 @@ namespace qb.Events
 
         //protected string CHANNEL_NOT_FILLED_ERROR => $"channel field of ECProvider with {channelAcessMode} access is not filled!";
     }
-    /// <summary>
-    /// Event channel provider with read channel acces
-    /// Manage event channel listener subscription and scriptable object source serialization issue from addressable object.
-    /// </summary>
 
+    /// <summary>
+    /// Provides read-only access to an event channel and allows adding or removing listeners for event notifications.
+    /// Manage scriptable object source refernce serialization issue from addressable assets.
+    /// </summary>
     [Serializable]
     public class ECProvider_R: ECProvider
     {
@@ -64,8 +64,8 @@ namespace qb.Events
         }
     }
     /// <summary>
-    /// Event channel provider with write channel acces
-    /// Manage channel event dispatch subscription and scriptable object source serialization issue from addressable object.
+    /// Provides write-only access to an event channel and allows dispatching events with optional invalid subscriptor
+    /// checking.
     /// </summary>
     [Serializable]
     public class ECProvider_W : ECProvider

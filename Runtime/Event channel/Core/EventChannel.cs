@@ -10,9 +10,17 @@ using UnityEditor;
 #endif
 namespace qb.Events
 {
+    /// <summary>
+    /// General event channel based on a ScriptableObject.
+    /// Allows you to subscribe/unsubscribe listeners and dispatch events
+    /// without direct dependency between senders and receivers.
+    /// </summary>
     [CreateAssetMenu(fileName = "EventChannel", menuName = "qb/Event/EventChannel")]
     public class EventChannel : SOWithGUID
     {
+        /// <summary>
+        /// Activate log when is set to true
+        /// </summary>
         [SerializeField]
         protected bool verbose = true;
 
@@ -31,6 +39,7 @@ namespace qb.Events
                 if (verbose)
                     Debug.Log($"<color=#00FF10>Add event listener on {this.name}</color>");
 #endif
+                // Avoid dupplicated delegate funnction
                 if (_event != null)
                 {
                     var invocationList = _event.GetInvocationList();
@@ -85,7 +94,7 @@ namespace qb.Events
         object locker = new object();
 
         /// <summary>
-        /// Remove all invalid subscriptions in case of behaviours deletion
+        /// Remove all invalid subscriptions in case of behaviours deletion to avoid the null references on event dispatch
         /// </summary>
         public void ClearInvalidSubscriptions()
         {
@@ -227,7 +236,11 @@ namespace qb.Events
         }
         
     }
-
+    /// <summary>
+    /// Abstract base class for event channels that allow dispatching and subscribing to events with a value and sender,
+    /// supporting safe subscription management and invalid subscription cleanup.
+    /// </summary>
+    /// <typeparam name="T">The type of value carried by the event channel.</typeparam>
     public abstract class EventChannel<T> : SOWithGUID
     {
         [SerializeField]

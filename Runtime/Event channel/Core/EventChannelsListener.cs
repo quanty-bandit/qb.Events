@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.Events;
 namespace qb.Events
 {
+    /// <summary>
+    /// Listens to multiple event channels and invokes corresponding UnityEvents when events are received.
+    /// </summary>
     [AddComponentMenu("qb/Event/EventChannelsListener")]
     public class EventChannelsListener : MonoBehaviour
     {
@@ -42,7 +45,11 @@ namespace qb.Events
 
         }
     }
-
+    /// <summary>
+    /// Abstract MonoBehaviour that manages a collection of event channel listeners, binding and unbinding them on
+    /// enable and disable.
+    /// </summary>
+    /// <typeparam name="T">The type of event data received from the event channels.</typeparam>
     public abstract class EventChannelsListener<T> : MonoBehaviour
     {
         [Serializable]
