@@ -34,24 +34,24 @@ Monobehaviour component that implement a public method to dispatch events using 
 Monobehaviour using for listening to multiple event channels and invokes corresponding UnityEvents when events are received.
 
 
-**EventChannel<T>**
+**EventChannel\<T>**
 
 Abstract base class for event channels that allow dispatching and subscribing to events with a value and sender.
 Supporting safe subscription management and invalid subscription cleanup.
 
-**ECProvider_R<T>**
+**ECProvider_R\<T>**
 
-Same as ECProvider_R applyed on an EventChannel<T> with a typed value
+Same as ECProvider_R applyed on an EventChannel\<T> with a typed value
 
-**ECProvider_W<T>**
+**ECProvider_W\<T>**
 
-Same as ECProvider_W applyed on an EventChannel<T> with a typed value
+Same as ECProvider_W applyed on an EventChannel\<T> with a typed value
 
-**EventChannelDispatcher<T>**
+**EventChannelDispatcher\<T>**
  
 Monobehaviour component that implement a public method to dispatch events value using a specified event channel provider.
 
-**EventChannelsListener<T>**
+**EventChannelsListener\<T>**
 Same as EventChannelsListener but managing event channels with a typed value
 
 #
