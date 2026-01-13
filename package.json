@@ -1,5 +1,5 @@
 {
-  "name": "com.quanty-bandit.qb.events",
+  "name": "com.quanty-bandit.events",
   "version": "1.0.0",
   "displayName": "qb.Events",
   "description": "Event channel management with scriptable object and other event behaviours",
