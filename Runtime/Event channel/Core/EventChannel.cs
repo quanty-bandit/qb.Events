@@ -354,7 +354,7 @@ namespace qb.Events
         [Button(ButtonSizes.Large),ShowIf(nameof(ShowDispatchEventButton))]
         void _DispatchEvent()
         {
-            var v = qb.Utility.Editor.InputDialog.Show("Input field", DispatchEventTestDescription, dispatchEventTestDefaultValue);
+            var v = qb.Utility.InputDialog.Show("Input field", DispatchEventTestDescription, dispatchEventTestDefaultValue);
             if (!string.IsNullOrEmpty(v)) 
                 DispatchEventFromString(v);
         }
