@@ -14,7 +14,7 @@ namespace qb.Events
         [Serializable]
         public class ListenerSettings
         {
-            [SerializeField,Required]
+            [SerializeField]
             ECProvider_R channelProvider;
             [SerializeField]
             UnityEvent<object> onEvent = new UnityEvent<object>();
@@ -55,7 +55,7 @@ namespace qb.Events
         [Serializable]
         public class ListenerSettings
         {
-            [SerializeField,Required]
+            [SerializeField]
             ECProvider_R<T> channelProvider;
             [SerializeField]
             UnityEvent<T,object> onEvent = new UnityEvent<T,object>();
