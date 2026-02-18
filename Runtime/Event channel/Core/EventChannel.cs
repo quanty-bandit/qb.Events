@@ -462,6 +462,7 @@ namespace qb.Events
         {
             base.Awake();
 #if UNITY_EDITOR
+            if (this == null) return;
             var currentPath = AssetDatabase.GetAssetPath(this);
             if (currentPath != null)
             {
