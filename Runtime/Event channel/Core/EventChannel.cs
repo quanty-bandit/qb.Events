@@ -348,6 +348,7 @@ namespace qb.Events
             }
         }
 #if UNITY_EDITOR
+        /*
         protected virtual string DispatchEventTestDescription => "Enter a value to dispatch";
         protected virtual string dispatchEventTestDefaultValue=>"";
         protected virtual bool ShowDispatchEventButton => false;
@@ -360,6 +361,12 @@ namespace qb.Events
         }
         protected virtual void DispatchEventFromString(string value) 
         { }
+        */
+        [Button(ButtonSizes.Large)]
+        void DispatchEvent(T value)
+        {
+            DispatchEvent(value, null,false);
+        }
 #endif
 
         /// <summary>
